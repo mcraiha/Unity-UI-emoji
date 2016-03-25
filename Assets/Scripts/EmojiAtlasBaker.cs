@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
-using UnityEditor;
+
 using System.IO;
 using System.Text;
 
 #if UNITY_EDITOR
+using UnityEditor;
 public static class EmojiAtlasBaker  {
 
     [MenuItem("Emoji/Bake Atlas")]
@@ -46,6 +47,8 @@ public static class EmojiAtlasBaker  {
             sb.AppendLine(Path.GetFileNameWithoutExtension(emojiFileNames[i]) + " " + rects[i].x + " " + rects[i].y + " " + rects[i].width + " " + rects[i].height );
         }
         File.WriteAllText(pathToEmojiInfo, sb.ToString());
+
+        Debug.Log("Baked " + emojiFileNames.Length + " emojis into " + pathToBakedAtlas);
     }
 }
 #endif

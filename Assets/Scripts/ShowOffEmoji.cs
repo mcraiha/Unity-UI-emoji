@@ -18,6 +18,13 @@ public class ShowOffEmoji : MonoBehaviour {
 
     private static char emSpace = '\u2001';
 
+    void Awake()
+    {
+        #if !UNITY_EDITOR && UNITY_WEBGL
+        WebGLInput.captureAllKeyboardInput = false;
+        #endif
+    }
+
     // Use this for initialization
     void Start ()
     {
@@ -68,6 +75,16 @@ public class ShowOffEmoji : MonoBehaviour {
             this.pos = p;
             this.emoji = s;
         }
+    }
+
+    public void SetReceipeTextFromJavascript(string input)
+    {
+        foreach (Transform child in receipeText.transform)
+        {
+            Destroy(child.gameObject);
+        }
+
+        StartCoroutine(this.SetUITextThatHasEmoji(this.receipeText, input));
     }
 
     public IEnumerator SetUITextThatHasEmoji(Text textToEdit, string inputString)
