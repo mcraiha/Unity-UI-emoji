@@ -1,3 +1,6 @@
+**Update:**
+[TextMesh Pro](https://www.assetstore.unity3d.com/en/#!/content/84126) is now free, and it will be [integrated to Unity](https://twitter.com/unity3d/status/836625140054179842). So if you want to use Emojis in your Unity project, I would suggest that you use it instead of Unity-UI-emoji.
+
 # Unity-UI-emoji
 Show emoji images in Unity UI text
 
