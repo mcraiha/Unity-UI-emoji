@@ -7,6 +7,7 @@ Show emoji images in Unity UI text
 ![Emojis](https://github.com/mcraiha/Unity-UI-emoji/blob/master/unity_emoji.png)
 
 [WebGL demo](http://mcraiha.github.io/demos/emoji/)
+
 ##Introduction
 Since Unity doesn't have build-in emoji support in it, I wanted to test out different approaches for showing emoji in Unity projects.
 
